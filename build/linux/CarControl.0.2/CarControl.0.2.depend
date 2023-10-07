@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1696686704 source:/home/evert/Code/CarControl.0.2/source/CarControl.cpp
+	"CarControl.h"
+	<string>
+	<chrono>
+
+1696616292 /home/evert/Code/CarControl.0.2/source/CarControl.h
+	<string>
+
+1696685476 source:/home/evert/Code/CarControl.0.2/source/main.cpp
+	<stdio.h>
+	<string>
+	<iostream>
+	"RCMessage.h"
+	"RCMailBox.h"
+	"RCData.h"
+	"CarControl.h"
+
+1693678671 /home/evert/Code/RCLibrary/RCMessage.h
+	<string>
+	<map>
+	<vector>
+
+1694243426 /home/evert/Code/RCLibrary/RCMailBox.h
+	"RCMessage.h"
+	"RCLibrary.h"
+
+1694290594 /home/evert/Code/RCLibrary/RCLibrary.h
+	<string>
+	<vector>
+
+1693678671 /home/evert/Code/RCLibrary/RCData.h
+	<string>
+	<string>
+	<map>
+
