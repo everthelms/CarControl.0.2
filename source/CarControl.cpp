@@ -78,7 +78,7 @@ std::string CarControl::StepSteering(std::string keyboardinput)
 	//gpio_in?data=18;12345  steering
 
 	// Steering
-	std::string command = "gpio_in?data=18;" + std::to_string(currentSteeringwheelPosition);
+	std::string command = "data=18;" + std::to_string(currentSteeringwheelPosition);
 
 	//std::string command = "STEERING=" + std::to_string(currentSteeringwheelPosition);
 	lastCommandSteering = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
@@ -167,7 +167,7 @@ std::string CarControl::StepThrottle(std::string keyboardinput)
 	//gpio_in?data=15;12345  throttle
 
 	// Steering
-	std::string command = "gpio_in?data=15;" + std::to_string(currentThrottlePosition);
+	std::string command = "data=15;" + std::to_string(currentThrottlePosition);
 
 	//std::string command = "THROTTLE=" + std::to_string(currentThrottlePosition);
 	lastCommandThrottle = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch()).count();

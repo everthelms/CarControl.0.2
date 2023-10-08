@@ -86,10 +86,10 @@ extern "C"
 			{
 				// Send commands to car
 				std::string command = theCarControl.StepSteering(latestKeyboardInput);
-				theMailbox.send(control_out_recevier_modules[i], control_out_recevier_inputs[i] + "?data={" + command + "}");
+				theMailbox.send(control_out_recevier_modules[i], control_out_recevier_inputs[i] + "?" + command );
 
 				command = theCarControl.StepThrottle(latestKeyboardInput);
-				theMailbox.send(control_out_recevier_modules[i], control_out_recevier_inputs[i] + "?data={" + command + "}");
+				theMailbox.send(control_out_recevier_modules[i], control_out_recevier_inputs[i] + "?" + command );
 
 			}
 		}
