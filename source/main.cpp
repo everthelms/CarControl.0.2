@@ -75,7 +75,8 @@ extern "C"
 
 			if (msg.command  == "keyboard_in")
 			{
-				latestKeyboardInput=  msg["keyboardmap"];
+				latestKeyboardInput=  msg["data"];
+				std::cout << latestKeyboardInput << "\n";
 			}
 
 
