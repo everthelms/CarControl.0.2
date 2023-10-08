@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/CarControl.0" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/CarControl" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
@@ -26,10 +26,12 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-fPIC" />
 					<Add directory="../../../../RCLibrary" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="../../../../RCLibrary/build/linux/RCLibrary/bin/Release/libRCLibrary.a" />
 				</Linker>
 			</Target>
 		</Build>

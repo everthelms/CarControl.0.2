@@ -24,19 +24,21 @@ extern "C"
 	void run(std::string parameter)
 	{
 #endif
+		std::cout << "CarControl.0.2 started\n";
+
 		RCMessage msg(parameter);
 		std::string creatorID = msg["from"];
 		RCMailBox theMailbox(creatorID);
 		RCData rcdata;
 
-		std::string moduleName = "RCGUIButton.0.2";
-
+		std::string moduleName = "CarControl.0.2";
+        std::cout << "CarControl.0.2 1\n";
 
 		CarControl theCarControl;
 		theCarControl.Init();
 		std::string latestKeyboardInput = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
 
-
+        std::cout << "CarControl.0.2 2\n";
 
 
 		std::vector<std::string> control_out_recevier_modules;
@@ -44,7 +46,7 @@ extern "C"
 
 
 		theMailbox.send(creatorID, { "confirmcreate", {{"type", moduleName},{"id", theMailbox.Id}} });
-
+        std::cout << "CarControl.0.2 3\n";
 		// *** Here starts the Messageloop ***
 		while (true)
 		{
